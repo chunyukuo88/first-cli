@@ -1,0 +1,8 @@
+{
+  "name": "gochenour",
+  "version": "1.0.0",
+  "bin": {
+    "command": "index.js"
+  },
+  "main": "index.js"
+}
