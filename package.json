@@ -1,7 +1,7 @@
 {
   "name": "gochenour",
   "description": "Get to know the man, the myth, the legend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "bin": {
     "gochenour": "index.js",
     "goch": "index.js"
@@ -11,5 +11,10 @@
     "gouchenour",
     "gochenator"
   ],
-  "main": "index.js"
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Alex Gochenour",
+    "favorite bread": "Wochebrot made with freshly milled teff and buckwheat."
+  }
 }
