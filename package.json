@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "gochenour",
   "description": "Get to know the man, the myth, the legend",
   "version": "1.2.0",
@@ -6,6 +7,10 @@
     "gochenour": "index.js",
     "goch": "index.js"
   },
+  "files": [
+    "index.js",
+    "utils/*"
+  ],
   "keywords": [
     "gochenour",
     "gouchenour",
@@ -16,5 +21,9 @@
   "author": {
     "name": "Alex Gochenour",
     "favorite bread": "Wochebrot made with freshly milled teff and buckwheat."
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "log-symbols": "^5.1.0"
   }
 }

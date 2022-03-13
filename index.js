@@ -1,14 +1,25 @@
 #!/usr/bin/env node
-const pkgJSON = require('./package.json');
+import { readFile } from 'fs/promises';
+import chalk from "chalk";
+import logSymbols from "log-symbols";
+
+const { cyan, yellow } = chalk;
+const { log, clear } = console;
+const pkg = JSON.parse(
+  await readFile(
+    new URL('./package.json', import.meta.url)
+  )
+);
+
 
 // const [,, ...args] = process.argv;
-console.clear();
-console.log(`
-${pkgJSON.description} using \`gochenour\`.
-You are using version ${pkgJSON.version}
-`);
+clear();
+log(yellow.inverse(`
+${pkg.description} using the ${pkg.name} CLI!
+ Version ${pkg.version} 
+`));
 
-console.log(`
+log(cyan(`
   howzit howzit
   
   I'm Alex Gochenour, and I am an award-winning* JavaScript engineer and founder of Woobler's House. 
@@ -18,4 +29,12 @@ console.log(`
   🐈 Github: https://github.com/chunyukuo88
   
   *I was named "Person of the Year" by Time Magazine in 2006.
-`);
+`));
+
+// module.exports = options => {
+//   const defaultOptions = {
+//     type: `success`,
+//     msg: ``
+//   };
+//   const opts = {...defaultOptions, ...options};
+// };
