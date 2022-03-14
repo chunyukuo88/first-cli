@@ -7,6 +7,9 @@
     "gochenour": "index.js",
     "goch": "index.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "files": [
     "index.js",
     "utils/*"
@@ -20,10 +23,17 @@
   "license": "MIT",
   "author": {
     "name": "Alex Gochenour",
-    "favorite bread": "Wochebrot made with freshly milled teff and buckwheat."
+    "favorite bread": "Wochebrot made with freshly milled teff and buckwheat.",
+    "nice things": "Node version management with the 'n' package, iTerm2 instead of the crap default terminal from iOS."
   },
   "dependencies": {
     "chalk": "^5.0.1",
     "log-symbols": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1"
   }
 }
