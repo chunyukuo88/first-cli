@@ -1,12 +1,12 @@
 import chalk from "chalk";
-import { readFile } from 'fs/promises';
+import { readFileSync } from 'fs';
 import logSymbols from "log-symbols";
 
 const { log } = console;
 const { cyan, yellow } = chalk;
 
 const pkg = JSON.parse(
-  await readFile(
+  readFileSync(
     new URL('../package.json', import.meta.url)
   )
 );
