@@ -5,7 +5,7 @@ const currentNodeVersion = process.versions.node;
 const semver = currentNodeVersion.split('.');
 const usersVersionOfNode = semver[0];
 
-export const runBasedOnNodeCompatibility = (minVer, failureOption) => {
+export const getNodeCompatibilityErrorMsg = (minVer, failureOption) => {
   const defaultOptions = { fail: true };
   const finalOptions = { ...defaultOptions, ...failureOption };
 
@@ -13,8 +13,7 @@ export const runBasedOnNodeCompatibility = (minVer, failureOption) => {
   if (usersVersionOfNode <  minVer) {
     const msg = buildFailureMsg(minVer);
     console.error(msg);
-    finalOptions.fail && process.exit(1);
-    return msg;
+    return finalOptions.fail && msg;
   };
 };
 
