@@ -2,7 +2,7 @@
   "type": "module",
   "name": "gochenour",
   "description": "Get to know the man, the myth, the legend",
-  "version": "1.5.1",
+  "version": "1.5.5",
   "bin": {
     "gochenour": "index.js",
     "goch": "index.js"
