@@ -2,13 +2,13 @@
 // import chalk from "chalk";
 
 const currentNodeVersion = process.versions.node;
-const semver = currentNodeVersion.split('.');
-const usersVersionOfNode = semver[0];
+const semanticVersion = currentNodeVersion.split('.');
+const usersVersionOfNode = semanticVersion[0];
 
 export const getNodeCompatibility = (minVer) => {
   const isCompatible = true;
 
-  if (usersVersionOfNode <  minVer) {
+  if (usersVersionOfNode <  Math.abs(minVer)) {
     const msg = buildFailureMsg(minVer);
     console.error('Your Node version is: ', currentNodeVersion);
     console.error(msg);
