@@ -3,7 +3,7 @@ import { printWelcome, printSelfIntro } from './utils/messages.js';
 import { getNodeCompatibility } from './utils/nodeVersionCheck.js';
 
 const { clear } = console;
-const minimumNodeVersion = 14;
+const minimumNodeVersion = 13; // Check https://nodejs.org/en/about/releases/ periodically for lowest Maintenance LTS version.
 
 function main(){
   clear();
