@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # `npx gochenour`
 
 > Get to know Alex Gochenour from the comfort of your command line with Node.js!
