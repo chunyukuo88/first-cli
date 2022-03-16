@@ -1,16 +1,24 @@
 {
-  "type": "module",
-  "name": "gochenour",
-  "description": "Get to know the man, the myth, the legend",
-  "version": "1.5.5",
+  "author": {
+    "name": "Alex Gochenour",
+    "favorite bread": "Wochebrot made with freshly milled teff and buckwheat."
+  },
   "bin": {
     "gochenour": "index.js",
     "goch": "index.js"
   },
-  "scripts": {
-    "c": "jest --coverage",
-    "prepare": "husky install",
-    "test": "jest --verbose"
+  "description": "Get to know the man, the myth, the legend",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "log-symbols": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1"
   },
   "files": [
     "index.js",
@@ -21,21 +29,14 @@
     "gouchenour",
     "gochenator"
   ],
-  "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "Alex Gochenour",
-    "favorite bread": "Wochebrot made with freshly milled teff and buckwheat."
+  "main": "index.js",
+  "name": "gochenour",
+  "scripts": {
+    "c": "jest --coverage",
+    "prepare": "husky install",
+    "test": "jest --verbose"
   },
-  "dependencies": {
-    "chalk": "^5.0.1",
-    "log-symbols": "^5.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11",
-    "husky": "^7.0.4",
-    "jest": "^27.5.1"
-  }
+  "type": "module",
+  "version": "1.5.6"
 }

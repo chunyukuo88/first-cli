@@ -6,13 +6,14 @@ const semanticVersion = currentNodeVersion.split('.');
 const usersVersionOfNode = semanticVersion[0];
 
 export const getNodeCompatibility = (minVer) => {
-  const isCompatible = true;
+  let isCompatible = true;
 
   if (usersVersionOfNode <  Math.abs(minVer)) {
     const msg = buildFailureMsg(minVer);
     console.error('Your Node version is: ', currentNodeVersion);
     console.error(msg);
-    return !isCompatible;
+    isCompatible = false;
+    return isCompatible;
   };
   return isCompatible;
 };

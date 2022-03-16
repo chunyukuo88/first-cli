@@ -1,10 +1,10 @@
 import { getNodeCompatibility, buildFailureMsg } from './nodeVersionCheck';
 
-describe('runBasedOnNodeCompatibility()', ()=>{
+describe('getNodeCompatibility()', ()=>{
   describe('GIVEN: The minimum Node version', ()=>{
     describe('WHEN: The user\'s version is below the minimum and failureOption is set to "false"', ()=>{
       const minimumNodeVersion = 1_400;
-      it('THEN: It returns undefined;', ()=>{
+      it('THEN: It returns false;', ()=>{
         const result = getNodeCompatibility(minimumNodeVersion);
 
         expect(result).toEqual(false);
