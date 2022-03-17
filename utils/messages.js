@@ -1,6 +1,10 @@
 import chalk from "chalk";
 import { readFileSync } from 'fs';
-import logSymbols from "log-symbols";
+
+export function greet(){
+  printWelcome();
+  printSelfIntro();
+}
 
 const { log } = console;
 const { cyan, yellow } = chalk;
@@ -11,14 +15,16 @@ const pkg = JSON.parse(
   )
 );
 
-export const printWelcome = () => {
+
+
+const printWelcome = () => {
   log(yellow.inverse(`
   ${pkg.description} using the ${pkg.name} CLI!
    Version ${pkg.version} 
   `));
 };
 
-export const printSelfIntro = () => {
+const printSelfIntro = () => {
   log(cyan(`
   howzit howzit
   
