@@ -15,8 +15,6 @@ const pkg = JSON.parse(
   )
 );
 
-
-
 const printWelcome = () => {
   log(yellow.inverse(`
   ${pkg.description} using the ${pkg.name} CLI!

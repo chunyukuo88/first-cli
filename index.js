@@ -8,9 +8,7 @@ const minimumNodeVersion = 14; // Check https://nodejs.org/en/about/releases/ pe
 function main(){
   clear();
   const isCompatible = getNodeCompatibility(minimumNodeVersion);
-  (!isCompatible)
-    ? process.exit(1)
-    : greet();
+  isCompatible && greet();
 }
 
 main();
