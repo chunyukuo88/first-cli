@@ -10,8 +10,7 @@
   "description": "Get to know the man, the myth, the legend",
   "dependencies": {
     "chalk": "^5.0.1",
-    "log-symbols": "^5.1.0",
-    "meow": "^10.1.2"
+    "log-symbols": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
