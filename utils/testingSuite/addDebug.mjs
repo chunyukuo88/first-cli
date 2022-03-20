@@ -9,12 +9,12 @@ const debugNeedNotBeAdded = (lineOfCode) => doesNotContainRender(lineOfCode) || 
 const doesNotContainRender = (lineOfCode) => {
   const render = new RegExp('render');
   return !render.test(lineOfCode);
-}
+};
 
 const alreadyContainsDebug = (lineOfCode) => {
   const debugPattern = /const \{.+debug.+} = render\(.+\)/;
   return debugPattern.test(lineOfCode);
-}
+};
 
 const addDebug = (lineOfCode) => (lineOfCode.slice(0, 7) === 'render(')
   ? `const { debug } = ${lineOfCode}${invokedDebug}`
@@ -24,6 +24,6 @@ const insertDebugIntoDestructuredObject = (lineOfCode) => {
   const asArray = lineOfCode.split('');
   asArray.splice(7, 0, ' debug,')
   return asArray.join('') + invokedDebug;
-}
+};
 
 const invokedDebug = '\ndebug();\n';
