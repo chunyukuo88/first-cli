@@ -1,11 +1,12 @@
 import chalk from "chalk";
 import boxen from "boxen";
 import { readFileSync } from 'fs';
+import { getWeatherData } from './weather.mjs';
 
-
-export function printAboutText(){
+export async function printAboutText(){
   printWelcome();
   printSelfIntro();
+  await printWeather();
 }
 
 const { log } = console;
@@ -44,4 +45,21 @@ const printSelfIntro = () => {
       )
     )
   );
+};
+
+const printWeather = async  () => {
+  const { temp, humidity } = await getWeatherData();
+  const tempInFahrenheit = convertToFahrenheit(temp);
+  log(
+    yellow(
+      `
+        It's ${tempInFahrenheit} degrees and ${humidity}% humidity in Westerville now.
+      `
+    )
+  );
+};
+
+const convertToFahrenheit = (degreesKelvin) => {
+  const degreesFahrenheit = (degreesKelvin - 273.15) * 9/5 + 32;
+  return Math.round(degreesFahrenheit);
 };

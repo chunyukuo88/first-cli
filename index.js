@@ -1,13 +1,14 @@
 #!/usr/bin/env node
-import { getNodeCompatibility } from './utils/nodeVersionCheck.mjs';
-import { evaluateArgs } from './utils/evaluateArgs.mjs';
+import 'dotenv/config'
+import { getNodeCompatibility } from './src/nodeVersionCheck.mjs';
+import { evaluateArgs } from './src/evaluateArgs.mjs';
 
 const currentNodeVersion = process.versions.node;
 
-function main(){
+async function main(){
   console.clear();
   const isCompatible = getNodeCompatibility(currentNodeVersion);
-  isCompatible && evaluateArgs(process.argv);
+  isCompatible && await evaluateArgs(process.argv);
 }
 
-main();
+await main();

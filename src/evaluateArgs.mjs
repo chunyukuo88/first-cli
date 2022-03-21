@@ -2,11 +2,11 @@ import { printAboutText } from './about.mjs';
 import { printHelpText } from './help.mjs';
 import boxen from "boxen";
 
-export function evaluateArgs(argsArray){
+export async function evaluateArgs(argsArray){
   const validPair = getFirstValidFlagFunctionPair(argsArray);
   if (!validPair) return printNoArgsFound();
   const correspondingFunction = validPair[1];
-  correspondingFunction();
+  await correspondingFunction();
 }
 
 function getFirstValidFlagFunctionPair(argsArray){
