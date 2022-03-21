@@ -11,7 +11,7 @@ async function processLineByLine() {
     let fileData = fs.readFileSync(filePath, "utf8").split('\n');
     const updatedArrayOfLines = [];
     fileData.forEach(lineOfCode => {
-      // TODO
+
       const updatedLine = removeAllDebug(lineOfCode);
       updatedArrayOfLines.push(updatedLine);
     });

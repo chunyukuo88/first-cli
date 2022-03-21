@@ -20,6 +20,15 @@ describe('removeAllDebug', ()=>{
         expect(result).toEqual('');
       });
     });
+    describe('WHEN: The code contains `debug` in a context that should not be deleted', ()=>{
+      it('THEN: The line is unchanged.', ()=>{
+        const lineOfCode = 'const debugThatShouldNotBeDeleted = "";';
+
+        const result = removeAllDebug(lineOfCode);
+
+        expect(result).toEqual(lineOfCode);
+      });
+    });
     describe.each`
       codeSnippet                                           | expectedResult
       ${'const { debug } = render('}                        | ${' render('}
