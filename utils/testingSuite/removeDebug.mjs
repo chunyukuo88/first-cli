@@ -9,9 +9,9 @@ const removeDebugFromLine = (lineOfCode) => (patterns.invokedDebug.test(lineOfCo
 const removeDestructuredDebug = (lineOfCode) => {
   if (!patterns.withOthersDestructured.test(lineOfCode)) return lineOfCode;
   return (patterns.asSoleDestructured.test(lineOfCode))
-    ? lineOfCode.slice(17)
+    ? lineOfCode.trim().slice(17)
     : removeFromDestructuredGroup(lineOfCode);
-}
+};
 
 const removeFromDestructuredGroup = (lineOfCode) => {
   const debugRemoved = lineOfCode.replace('debug', '');

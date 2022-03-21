@@ -1,4 +1,6 @@
-|||||| Scenarios where `debug` should be deleted: ||||||
+⌌一一一一一一一一一一一一一一一一一一一一一一一一一一一⌍
+⎪ Scenarios where `debug` should be deleted:  ⎪
+⌎一一一一一一一一一一一一一一一一一一一一一一一一一一一⌏
 0. Single destructured `debug`:
 const { debug } = render(1);
 ==============================
@@ -28,8 +30,9 @@ debug();
 8. An invoked "debug" without an argument given to it or a semicolon:
 debug()
 
-|||||| Scenarios where `debug` should not be deleted: ||||||
-==============================
+⌌一一一一一一一一一一一一一一一一一一一一一一一一一一一一一⌍
+⎪ Scenarios where `debug` should NOT be deleted: ⎪
+⌎一一一一一一一一一一一一一一一一一一一一一一一一一一一一一⌏
 9. Just the word "debug" alone, which should not be deleted:
 debug
 ==============================

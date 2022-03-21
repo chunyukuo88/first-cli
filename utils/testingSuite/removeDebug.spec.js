@@ -32,6 +32,7 @@ describe('removeAllDebug', ()=>{
     describe.each`
       codeSnippet                                           | expectedResult
       ${'const { debug } = render('}                        | ${' render('}
+      ${'  const { debug } = render('}                      | ${' render('}
       ${'const { debug, component } = render('}             | ${'const { component } = render('}
       ${'const { component, debug } = render('}             | ${'const { component } = render('}
       ${'const { component, debug, getByRole } = render('}  | ${'const { component, getByRole } = render('}
