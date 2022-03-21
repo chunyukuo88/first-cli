@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import boxen from "boxen";
 import { readFileSync } from 'fs';
 
 
@@ -8,7 +9,7 @@ export function printAboutText(){
 }
 
 const { log } = console;
-const { cyan, yellow } = chalk;
+const { cyan, red, yellow } = chalk;
 
 const pkg = JSON.parse(
   readFileSync(
@@ -17,22 +18,30 @@ const pkg = JSON.parse(
 );
 
 const printWelcome = () => {
-  log(yellow.inverse(`
-  ${pkg.description} using the ${pkg.name} CLI!
-   Version ${pkg.version}
-  `));
+  log(
+    yellow.inverse(
+ `${pkg.description} using the ${pkg.name} CLI. Version ${pkg.version}`
+    )
+  );
 };
 
 const printSelfIntro = () => {
-  log(cyan(`
-  howzit howzit
+  const asterisk = red('*');
+  log(
+    cyan(
+      boxen(
+        `
+  Howzit howzit
 
-  I'm Alex Gochenour, and I am an award-winning* JavaScript engineer and founder of Woobler's House.
+  I'm Alex Gochenour, and I am an award-winning${asterisk} JavaScript engineer and founder of Woobler's House. 
   I love baking, running, and all things Chinese.
 
   🔗 Linkedin: https://www.linkedin.com/in/alex-gochenour
   🐈 Github: https://github.com/chunyukuo88
 
-  *I was named "Person of the Year" by Time Magazine in 2006.
-`));
+  ${asterisk} I was named "Person of the Year" by Time Magazine in 2006.
+        `
+      )
+    )
+  );
 };
