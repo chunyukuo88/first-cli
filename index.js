@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getNodeCompatibility } from './utils/nodeVersionCheck.mjs';
-import { evaluateArgs } from './utils/evaluateArgs.mjs';
+import { getNodeCompatibility } from './src/nodeVersionCheck.mjs';
+import { evaluateArgs } from './src/evaluateArgs.mjs';
 
 const currentNodeVersion = process.versions.node;
 
